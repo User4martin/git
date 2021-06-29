@@ -70,8 +70,12 @@ $ git switch <new-branch>
 -C <new-branch>::
 --force-create <new-branch>::
 	Similar to `--create` except that if `<new-branch>` already
-	exists, it will be reset to `<start-point>`. This is a
-	convenient shortcut for:
+	exists, it will be reset to `<start-point>`. 
+	This forces the branch to the new location. It also forces
+	any commit hold by the branch to be dropped, unless the 
+	commit is also part of any other branch too. You may
+	therefore loose some of your data.
+	This is a convenient shortcut for:
 +
 ------------
 $ git branch -f <new-branch>
